@@ -226,7 +226,7 @@ form button:hover {
     height: 100vh;
     margin: 0;
     padding: 0;
-    border-bottom: 1px solid var(--margin-color);
+    outline: 1px solid var(--margin-color);
     background-color: var(--wall-bg-color);
 }
 
@@ -498,7 +498,7 @@ form button:hover {
     --text-color: hsla(168, 100%, 98%, 0.9);
     --lighter-text-color: hsl(168, 100%, 10%);
 
-    --margin-color: hsl(167, 14%, 54%);
+    --margin-color: hsla(167, 14%, 54%, 50%);
     --icon-color: hsla(168, 100%, 97%, 0.5);
     --icon-hover-color: hsla(168, 100%, 98%, 0.9);
 }
