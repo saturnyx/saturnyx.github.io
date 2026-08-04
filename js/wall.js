@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   let isOverWall = false;
+  let isReturningToCenter = false;
   let rafId = null;
   let mouseX = 0;
   let mouseY = 0;
@@ -63,9 +64,22 @@ document.addEventListener("DOMContentLoaded", () => {
       el.style.transform = `translate(-50%, 0) translate3d(${x}px, ${y}px, 0)`;
     });
 
-    if (isOverWall) {
+    const centerX = (wall.offsetWidth || 1) / 2;
+    const centerY = (wall.offsetHeight || 1) / 2;
+    const isNearCenter =
+      Math.abs(lerpedX - centerX) < 0.25 && Math.abs(lerpedY - centerY) < 0.25;
+
+    if (isOverWall || (isReturningToCenter && !isNearCenter)) {
       rafId = requestAnimationFrame(updateImagePositions);
     } else {
+      if (isReturningToCenter && isNearCenter) {
+        lerpedX = centerX;
+        lerpedY = centerY;
+        imgMeta.forEach(({ el }) => {
+          el.style.transform = "translate(-50%, 0)";
+        });
+      }
+      isReturningToCenter = false;
       rafId = null;
     }
   }
@@ -81,12 +95,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function stopAnimation() {
     isOverWall = false;
-    if (rafId) {
-      cancelAnimationFrame(rafId);
-      rafId = null;
-    }
     removeMouseMoveListener();
-    resetImagesToCenter();
+    mouseX = wall.offsetWidth / 2;
+    mouseY = wall.offsetHeight / 2;
+    isReturningToCenter = true;
+    if (!rafId) {
+      rafId = requestAnimationFrame(updateImagePositions);
+    }
   }
 
   // mousemove handler attached only while over wall
@@ -107,6 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
     mouseX = rect.left + rect.width / 2;
     mouseY = rect.top + rect.height / 2;
     resetImagesToCenter();
+    isReturningToCenter = false;
     if (!isOverWall) {
       isOverWall = true;
       addMouseMoveListener();
