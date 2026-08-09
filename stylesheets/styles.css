@@ -1,13 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap");
-
-@font-face {
-    font-family: "Zarathustra";
-    src: url("../fonts/zrth.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
 html {
     margin: 0;
     padding: 0;
@@ -473,12 +463,13 @@ form button:hover {
 
 .footer-icon {
     padding: 5px;
-    color: var(--icon-color);
+    opacity: 80%;
     font-size: 1.5rem;
-    transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 1.5rem;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-icon:hover {
-    color: var(--icon-hover-color);
+    opacity: 100%;
 }
 
 .footer-form-container {
@@ -518,10 +509,25 @@ form button:hover {
     --wall-bg-color: hsl(168, 100%, 97%);
 
     --title-color: hsl(168, 100%, 10%);
-    --text-color: hsla(168, 100%, 98%, 0.8);
-    --lighter-text-color: hsl(168, 100%, 10%);
+    --text-color: hsla(0, 100%, 100%, 0.8);
 
     --margin-color: hsla(167, 14%, 54%, 50%);
-    --icon-color: hsla(168, 100%, 97%, 0.5);
-    --icon-hover-color: hsla(168, 100%, 98%, 0.9);
+    --icon-color: hsla(0, 100%, 100%, 0.8);
+    --icon-hover-color: hsla(0, 100%, 100%, 1);
+}
+
+@font-face {
+    font-family: "Zarathustra";
+    src: url("../fonts/zrth.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("../fonts/manrope.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
