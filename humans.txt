@@ -1,0 +1,20 @@
+                HARSHAL'S PERSONAL PROFILE WEBSITE
+                -- for humans and not for bots --
+
+CONTENT -----------------------------------------------------------------------+
+
+Main Developer: S.Harshal (@saturnyx)
+Email: saturnyx@disroot.org
+Github: https://github.com/saturnyx
+
+IMAGES ------------------------------------------------------------------------+
+
+Programming Language Icons: Devicons
+Wallpaper SVGs: Unknown Author
+
+CODE -------------------------------------------------------------------------+
+
+Most of the programming was done by me of course! But I would like to thank a
+few people for their contributions in:
+
+VANILLA-TILT: Sergiu Șandor (micku7zu)
