@@ -20,7 +20,6 @@ h1 {
     z-index: 13;
     width: 100%;
     margin: 0;
-    padding-top: 20vh;
     padding-top: clamp(10vh, 20vh, 20vw);
     text-align: center;
     color: var(--title-color);
@@ -309,8 +308,6 @@ form button:hover {
     width: 1.5em;
     height: 1.5em;
     vertical-align: middle;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: pixelated;
 }
 
 .quote {
@@ -336,7 +333,7 @@ form button:hover {
     background-color: var(--widget-bg-color);
     transition:
         transform 0.4s cubic-bezier(0.03, 0.98, 0.52, 0.99),
-        box-shadow 0.4s cubic-bezier(0.03, 0.98, 0.52, 0.99) !important;
+        box-shadow 0.4s cubic-bezier(0.03, 0.98, 0.52, 0.99);
 }
 
 .project-img {
