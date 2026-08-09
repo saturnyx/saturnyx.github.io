@@ -402,8 +402,8 @@ form button:hover {
 }
 
 .loader::after {
-    content: "LOADING...";
-    letter-spacing: 0.5rem;
+    content: "Hmm... Looks like the internet's a bit slow today.";
+    letter-spacing: -0.1rem;
     opacity: 0;
     color: var(--text-color);
     font-family:
