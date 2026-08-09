@@ -3,6 +3,7 @@ html {
     padding: 0;
     background-color: var(--bg-color);
     -ms-overflow-style: none;
+    overflow-x: hidden;
     scrollbar-width: none;
 }
 
@@ -11,6 +12,7 @@ body {
     padding: 0;
     background-color: var(--bg-color);
     font-family: "Manrope", sans-serif;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -23,13 +25,13 @@ h1 {
     text-align: center;
     color: var(--title-color);
     font-family: "Zarathustra", serif;
-    font-size: 12rem;
+    font-size: 13vw;
     font-weight: 700;
 }
 
 h2 {
     margin: 0;
-    padding: 2rem 20vw 0;
+    padding: 2rem calc(30vw - 100px) 0;
     text-align: left;
     letter-spacing: 0rem;
     color: var(--text-color);
@@ -40,7 +42,7 @@ h2 {
 
 h3 {
     margin: 0;
-    padding: 1.5rem 20vw 0.5rem;
+    padding: 1.5rem calc(30vw - 100px) 0.5rem;
     text-align: left;
     letter-spacing: 0rem;
     color: var(--text-color);
@@ -51,7 +53,7 @@ h3 {
 
 p {
     margin: 0;
-    padding: 0vw 20vw;
+    padding: 0vw calc(30vw - 100px);
     letter-spacing: -0.03rem;
     color: var(--text-color);
     font-family: "Manrope", sans-serif;
@@ -67,7 +69,7 @@ a {
 }
 
 ul {
-    margin: 0 20vw 2rem;
+    margin: 0 calc(30vw - 100px) 2rem;
 }
 
 li {
@@ -207,7 +209,7 @@ form button:hover {
     z-index: 15;
     width: 100%;
     margin: 0;
-    margin-top: -2rem;
+    margin-top: -2vw;
     text-align: center;
     color: var(--title-color);
     font-family: "Manrope", sans-serif;
@@ -318,7 +320,7 @@ form button:hover {
     font-size: 1.5rem;
 }
 .projects-grid {
-    margin: 0 20vw;
+    margin: 0 calc(30vw - 100px);
     padding: 0;
 }
 
@@ -344,7 +346,7 @@ form button:hover {
     padding: 0;
     image-rendering: crisp-edges;
     image-resolution: from-image;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
     border-right: 1px solid var(--margin-color);
 }
@@ -355,7 +357,14 @@ form button:hover {
     padding: 0;
     display: grid;
     grid-template-columns: 30% 65%;
+    grid-template-rows: 100%;
     gap: 5%;
+    @media (max-width: 768px) {
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        gap: 0;
+        justify-content: center;
+    }
 }
 
 .project-title {
@@ -428,7 +437,13 @@ form button:hover {
     background-color: var(--widget-bg-color);
     font-family: "Manrope", sans-serif;
     gap: 1vw;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    @media (max-width: 768px) {
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        padding-right: 5vw;
+    }
 }
 
 .footer h2 {
@@ -443,6 +458,9 @@ form button:hover {
     text-align: justify;
     font-size: 1rem;
     line-height: normal;
+    @media (max-width: 768px) {
+        padding-right: 5vw;
+    }
 }
 
 .footer button {
@@ -459,6 +477,9 @@ form button:hover {
     padding-right: 5vw;
     padding-left: 4.7vw;
     margin-top: auto;
+    @media (max-width: 768px) {
+        padding-bottom: 5vw;
+    }
 }
 
 .footer-icon {
@@ -476,6 +497,10 @@ form button:hover {
     display: flex;
     height: 100%;
     padding-right: 5vw;
+    @media (max-width: 768px) {
+        padding-left: 5vw;
+        justify-content: center;
+    }
 }
 
 ::placeholder {
