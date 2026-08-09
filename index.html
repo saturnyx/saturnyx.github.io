@@ -307,12 +307,19 @@
                         action="https://formsubmit.co/saturnyx@disroot.org"
                         method="POST"
                     >
+                        <input
+                            type="hidden"
+                            name="_next"
+                            value="https://saturnyx.github.io/?submitted=1"
+                        />
                         <input type="email" name="email" placeholder="EMAIL" />
                         <textarea
                             name="message"
                             placeholder="MESSAGE"
                         ></textarea>
-                        <button type="submit">Send</button>
+                        <button type="submit" id="contact-submit-btn">
+                            Send
+                        </button>
                     </form>
                 </div>
             </div>
@@ -320,5 +327,11 @@
 
         <div class="loader"></div>
         <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+        <script>
+            if (new URLSearchParams(window.location.search).has("submitted")) {
+                const submitButton = document.getElementById("contact-submit-btn");
+                if (submitButton) submitButton.textContent = "submitted";
+            }
+        </script>
     </body>
 </html>
