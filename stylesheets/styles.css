@@ -133,6 +133,9 @@ button:hover {
 }
 
 form {
+    display: flex;
+    flex-direction: column;
+
     align-items: left;
     width: 100%;
     height: 100%;
@@ -147,7 +150,7 @@ input {
     width: calc(100% - 2rem);
     max-width: 100%;
     height: 20%;
-    margin: 0.7rem;
+    margin: 0.3rem;
     padding: 1rem;
     color: var(--text-color);
     border: 1px solid var(--margin-color);
@@ -163,8 +166,8 @@ textarea {
     box-sizing: border-box;
     width: calc(100% - 2rem);
     max-width: 100%;
-    height: 35%;
-    margin: 0.7rem;
+    flex-grow: 1;
+    margin: 0.3rem;
     padding: 1rem;
     color: var(--text-color);
     border: 1px solid var(--margin-color);
@@ -177,14 +180,15 @@ textarea {
 form button {
     position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
     width: calc(100% - 2rem);
     max-width: 100%;
     height: 20%;
-    margin: 0.7rem;
-    margin-bottom: 2rem;
+    margin: 0.3rem;
+    margin-bottom: 0;
     text-align: center;
     color: var(--text-color);
     border: 1px solid var(--margin-color);
