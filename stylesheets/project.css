@@ -1,0 +1,66 @@
+.projects-grid {
+    margin: 0 calc(30vw - 100px);
+    padding: 0;
+}
+
+.project-container {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem 0;
+    padding: 0;
+    border: 1px solid var(--margin-color);
+    background-color: var(--widget-bg-color);
+    transition:
+        transform 0.4s cubic-bezier(0.03, 0.98, 0.52, 0.99),
+        box-shadow 0.4s cubic-bezier(0.03, 0.98, 0.52, 0.99);
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    image-rendering: crisp-edges;
+    image-resolution: from-image;
+    object-fit: contain;
+    object-position: center;
+    border-right: 1px solid var(--margin-color);
+}
+
+.project-info-grid {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 30% 65%;
+    grid-template-rows: 100%;
+    gap: 5%;
+    @media (max-width: 768px) {
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        gap: 0;
+        justify-content: center;
+    }
+}
+
+.project-title {
+    margin: 0;
+    padding: 1.5rem 0 0.5rem;
+    text-align: center;
+    letter-spacing: 0rem;
+    color: var(--text-color);
+    font-family: "Zarathustra", serif;
+    font-size: 1.75rem;
+}
+
+.project-text {
+    margin: 0;
+    padding: 0 5% 1vw;
+    color: var(--text-color);
+    font-family: "Manrope", sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.75rem;
+}

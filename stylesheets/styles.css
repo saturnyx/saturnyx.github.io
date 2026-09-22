@@ -1,3 +1,9 @@
+@import "footer.css";
+@import "lang-icon.css";
+@import "loader.css";
+@import "project.css";
+@import "wall.css";
+
 html {
     margin: 0;
     padding: 0;
@@ -13,6 +19,7 @@ body {
     background-color: var(--bg-color);
     font-family: "Manrope", sans-serif;
     overflow-x: hidden;
+    /*background-image: url("https://www.transparenttextures.com/patterns/robots.png");*/
 }
 
 h1 {
@@ -221,89 +228,6 @@ form button:hover {
     padding-left: 40vw;
 }
 
-.wall {
-    position: relative;
-    overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    outline: 1px solid var(--margin-color);
-    background-color: var(--wall-bg-color);
-}
-
-.image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    bottom: 0;
-    height: 110%;
-    object-fit: cover;
-}
-
-.image1 {
-    z-index: 11;
-}
-
-.image2 {
-    z-index: 12;
-}
-
-.image3 {
-    z-index: 13;
-}
-
-.image4 {
-    z-index: 14;
-}
-
-.image5 {
-    z-index: 15;
-}
-
-.image6 {
-    z-index: 16;
-}
-
-.image7 {
-    z-index: 17;
-}
-
-.image8 {
-    z-index: 18;
-}
-
-.lang-icon-container {
-    align-content: center;
-    align-items: center;
-    margin-top: 1.9rem;
-    padding-top: 0;
-    padding-bottom: 1rem;
-    text-align: center;
-    border-top: 1px solid var(--margin-color);
-    border-bottom: 1px solid var(--margin-color);
-    background-color: var(--widget-bg-color);
-}
-
-.lang-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: content-box;
-    width: 6rem;
-    height: 6rem;
-    margin: 0;
-    vertical-align: middle;
-    color: var(--icon-color);
-    font-size: 3.5rem;
-    transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.lang-icon:hover {
-    color: var(--icon-hover-color);
-}
-
 .list-icon {
     width: 1.5em;
     height: 1.5em;
@@ -315,189 +239,6 @@ form button:hover {
     padding-top: 2rem;
     padding-bottom: 2rem;
     font-size: 1.5rem;
-}
-.projects-grid {
-    margin: 0 calc(30vw - 100px);
-    padding: 0;
-}
-
-.project-container {
-    display: flex;
-    overflow: hidden;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    margin: 1rem 0;
-    padding: 0;
-    border: 1px solid var(--margin-color);
-    background-color: var(--widget-bg-color);
-    transition:
-        transform 0.4s cubic-bezier(0.03, 0.98, 0.52, 0.99),
-        box-shadow 0.4s cubic-bezier(0.03, 0.98, 0.52, 0.99);
-}
-
-.project-img {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    image-rendering: crisp-edges;
-    image-resolution: from-image;
-    object-fit: contain;
-    object-position: center;
-    border-right: 1px solid var(--margin-color);
-}
-
-.project-info-grid {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 30% 65%;
-    grid-template-rows: 100%;
-    gap: 5%;
-    @media (max-width: 768px) {
-        grid-template-columns: 100%;
-        grid-template-rows: 50% 50%;
-        gap: 0;
-        justify-content: center;
-    }
-}
-
-.project-title {
-    margin: 0;
-    padding: 1.5rem 0 0.5rem;
-    text-align: center;
-    letter-spacing: 0rem;
-    color: var(--text-color);
-    font-family: "Zarathustra", serif;
-    font-size: 1.75rem;
-}
-
-.project-text {
-    margin: 0;
-    padding: 0 5% 1vw;
-    color: var(--text-color);
-    font-family: "Manrope", sans-serif;
-    font-size: 1.15rem;
-    line-height: 1.75rem;
-}
-
-.loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    border: none;
-    background-color: var(--bg-color);
-}
-
-.loader::after {
-    content: "Hmm... Looks like the internet's a bit slow today.";
-    letter-spacing: -0.1rem;
-    opacity: 0;
-    color: var(--text-color);
-    font-family:
-        "Arial", "Helvetica", "Manrope", "Segoe UI", "Roboto", sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-    animation: fadeIn 0.5s ease-in forwards;
-    animation-delay: 3s;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.footer {
-    bottom: 0;
-    display: grid;
-    width: 100%;
-    margin: 0;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    text-align: center;
-    color: var(--text-color);
-    border-top: 1px solid var(--margin-color);
-    border-bottom: 1px solid var(--margin-color);
-    background-color: var(--widget-bg-color);
-    font-family: "Manrope", sans-serif;
-    gap: 1vw;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100%;
-    @media (max-width: 768px) {
-        grid-template-columns: 100%;
-        grid-template-rows: 50% 50%;
-        padding-right: 5vw;
-    }
-}
-
-.footer h2 {
-    padding-top: 0;
-    padding-left: 5vw;
-    text-align: left;
-}
-.footer p {
-    margin: 0;
-    padding-right: 1vw;
-    padding-left: 5vw;
-    text-align: justify;
-    font-size: 1rem;
-    line-height: normal;
-    @media (max-width: 768px) {
-        padding-right: 5vw;
-    }
-}
-
-.footer button {
-    margin-bottom: 0;
-}
-
-.footer-icon-container {
-    display: flex;
-    align-items: flex-end;
-    justify-content: left;
-    height: max-content;
-    margin: 0;
-    padding: 0;
-    padding-right: 5vw;
-    padding-left: 4.7vw;
-    margin-top: auto;
-    @media (max-width: 768px) {
-        padding-bottom: 5vw;
-    }
-}
-
-.footer-icon {
-    padding: 5px;
-    opacity: 80%;
-    font-size: 1.5rem;
-    height: 1.5rem;
-    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.footer-icon:hover {
-    opacity: 100%;
-}
-
-.footer-form-container {
-    display: flex;
-    height: 100%;
-    padding-right: 5vw;
-    @media (max-width: 768px) {
-        padding-left: 5vw;
-        justify-content: center;
-    }
 }
 
 ::placeholder {
