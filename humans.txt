@@ -1,11 +1,16 @@
-                HARSHAL'S PERSONAL PROFILE WEBSITE
-                -- for humans and not for bots --
+                    HARSHAL'S PERSONAL PROFILE WEBSITE
+                    -- for humans and not for bots --
 
 CONTENT -----------------------------------------------------------------------+
 
 Main Developer: S.Harshal (@saturnyx)
 Email: saturnyx@disroot.org
 Github: https://github.com/saturnyx
+
+FONTS -------------------------------------------------------------------------+
+
+Sans Serif Font: Manrope by Mikhail Sharanda
+Serif Font: Zarathustra (multiple authors)
 
 IMAGES ------------------------------------------------------------------------+
 
@@ -17,5 +22,5 @@ CODE --------------------------------------------------------------------------+
 Most of the programming was done by me of course! But I would like to thank a
 few people for their contributions in:
 
-VANILLA-TILT: Sergiu Șandor (micku7zu)
-FORMSPREE
+Vanilla-tilt: Sergiu Șandor (micku7zu)
+Form: formsubmit.co
