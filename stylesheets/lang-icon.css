@@ -13,6 +13,8 @@
 .lang-icon {
     display: inline-flex;
     align-items: center;
+    position: relative;
+    cursor: pointer;
     justify-content: center;
     box-sizing: content-box;
     width: 6rem;
@@ -26,4 +28,30 @@
 
 .lang-icon:hover {
     color: var(--icon-hover-color);
+}
+
+.lang-icon::after {
+    content: attr(data-tooltip);
+    opacity: 0;
+    text-align: center;
+    line-height: 1.2rem;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg-color);
+    border: 1px solid var(--margin-color);
+    color: var(--text-color);
+    padding: 8px 8px;
+    width: 15vw;
+    border-radius: 0px;
+    font-size: 15px;
+    white-space: pre-line;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 10;
+}
+
+.lang-icon:hover::after {
+    visibility: visible;
+    opacity: 1;
 }
