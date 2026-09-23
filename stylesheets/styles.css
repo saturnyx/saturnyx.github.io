@@ -36,6 +36,7 @@ h1 {
 }
 
 h2 {
+    position: relative;
     margin: 0;
     padding: 2rem calc(30vw - 100px) 0;
     text-align: left;
@@ -44,6 +45,23 @@ h2 {
     font-family: "Zarathustra", serif;
     font-size: 2.75rem;
     font-weight: 300;
+}
+
+@media (min-width: 768px) {
+    h2::before {
+        content: "\1F7C6";
+        margin-right: 0.4em;
+        position: absolute;
+        left: calc(30vw - 150px);
+        display: inline-block;
+        transform: rotateZ(0deg) translate(0, 0) scale(0.8);
+        transition: transform 0.4s ease;
+        color: var(--text-color);
+    }
+
+    h2:hover::before {
+        transform: rotateZ(90deg) translate(-3px, 3px) scale(1);
+    }
 }
 
 h3 {
@@ -72,6 +90,7 @@ a {
     margin: 0;
     padding: 0;
     text-decoration: none;
+    color: var(--icon-hover-color);
 }
 
 ul {
@@ -290,7 +309,7 @@ form button:hover {
 @font-face {
     font-family: "Manrope";
     src: url("../fonts/manrope.woff2") format("woff2");
-    font-weight: 400;
+    font-weight: 400 800;
     font-style: normal;
     font-display: swap;
 }

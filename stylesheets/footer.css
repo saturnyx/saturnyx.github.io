@@ -26,6 +26,10 @@
     padding-left: 5vw;
     text-align: left;
 }
+
+.footer h2::before {
+    content: "";
+}
 .footer p {
     margin: 0;
     padding-right: 1vw;

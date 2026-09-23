@@ -9,6 +9,8 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    z-index: 0;
     margin: 1rem 0;
     padding: 0;
     border: 1px solid var(--margin-color);
@@ -16,6 +18,10 @@
     transition:
         transform 0.4s cubic-bezier(0.03, 0.98, 0.52, 0.99),
         box-shadow 0.4s cubic-bezier(0.03, 0.98, 0.52, 0.99);
+}
+
+.project-container:hover {
+    z-index: 1;
 }
 
 .project-img {
