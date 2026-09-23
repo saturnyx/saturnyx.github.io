@@ -20,7 +20,7 @@
             type="text/css"
             href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
         />
-
+        <link rel="stylesheet" href="stylesheets/hint.css" />
         <script src="js/wall.js"></script>
         <script src="js/load.js"></script>
     </head>
@@ -41,13 +41,10 @@
         <br />
         <h2 style="padding-top: 0">Who I am</h2>
         <p>
-            Hey! I'm Harshal — a passionate student developer currently based in
-            Singapore. I enjoy exploring the world of technology and building
-            creative solutions across a wide range of platforms. Whether it's
-            programming Raspberry Pi projects, experimenting with robotics, or
-            developing full-stack web applications and servers, I love diving
-            into new challenges and expanding my skills through real-world
-            projects.
+            Hey! I'm Harshal — a passionate student programming enthusiast
+            currently based in Singapore. Also a devoted Linux user (fedora) who
+            likes to spend his tinkering on Raspberry Pi projects, Robotics and
+            a few other quirky stuff.
         </p>
         <div class="lang-icon-container">
             <h3 style="text-align: center">Languages I know</h3>
@@ -63,7 +60,7 @@
             <i class="devicon-ruby-plain lang-icon"></i>
         </div>
         <h2>More about me</h2>
-        <h3>What I love</h3>
+        <h3>My Programing Style</h3>
         <ul>
             <li>
                 <img
@@ -72,7 +69,7 @@
                     class="list-icon"
                 />
                 <span>
-                    <strong>Building ground up:</strong>
+                    <strong>Build it Yourself!</strong>
                     I don't like just reusing old algorithms and libraries. I
                     build my own customized implementations.
                 </span>
@@ -84,9 +81,9 @@
                     class="list-icon"
                 />
                 <span>
-                    <strong>Performance is key:</strong>
-                    Pretty obvious for a Iot dev, but I like to make sure my
-                    code is optimized and efficient. I'll write a program in
+                    <strong>Performance is key.</strong>
+                    Pretty obvious for a robotics dev, but I like to make sure
+                    my code is optimized and efficient. I'll write a program in
                     assembly if its a second faster.
                 </span>
             </li>
@@ -97,7 +94,7 @@
                     class="list-icon"
                 />
                 <span>
-                    <strong>Stability and Robustness:</strong>
+                    <strong>Nothing is worse than your program failing.</strong>
                     As someone who has knows what its like for important systems
                     to fail, I make sure that all my libraries are stable and
                     robust regardless of how small they are.
@@ -145,10 +142,10 @@
         <br />
         <div class="lang-icon-container">
             <p class="quote">
-                "Any fool can write code that a computer can understand. Good
-                programmers write code that humans can understand."<i>
-                    ~ Martin Fowler</i
-                >
+                &#128630; Any fool can write code that a computer can
+                understand. Good programmers write code that humans can
+                understand.&#128631;
+                <br /><i><small> ~ Martin Fowler</small></i>
             </p>
         </div>
         <h2>Recent Projects</h2>
@@ -156,10 +153,10 @@
             <div
                 class="project-container"
                 data-tilt
-                data-tilt-max="2"
-                data-tilt-speed="1"
+                data-tilt-max="4"
                 data-tilt-perspective="1000"
                 data-tilt-reverse="true"
+                data-tilt
             >
                 <div class="project-info-grid">
                     <div>
@@ -195,8 +192,7 @@
             <div
                 class="project-container"
                 data-tilt
-                data-tilt-max="2"
-                data-tilt-speed="1"
+                data-tilt-max="4"
                 data-tilt-perspective="1000"
                 data-tilt-reverse="true"
             >
@@ -211,8 +207,11 @@
                     <div>
                         <h3 class="project-title">Aphrovex</h3>
                         <p class="project-text">
-                            A VEX v5 Sim engine based on lewisfm's Roboscope SDK
-                            backend. Still in active development.
+                            A VEX v5 Sim engine based on
+                            <a href="https://github.com/lewisfm">@lewisfm</a>'s
+                            <a href="https://github.com/vexide/roboscope"
+                                >Roboscope SDK backend</a
+                            >. Still in active development.
                         </p>
                         <button
                             type="button"
@@ -231,8 +230,8 @@
         </div>
         <br />
         <p style="text-align: center; padding: 0 calc(40vw - 100px)">
-            Yes, if you were wondering, this site was written in pure HTML, JS &
-            CSS. No frameworks, no bloat, just raw speed.
+            Yes, if you were wondering, this site was written in pure HTML, CSS
+            & Vanilla JS. No frameworks, no bloat, just raw speed.
         </p>
         <br />
         <br />
@@ -329,7 +328,8 @@
         <script type="text/javascript" src="js/vanilla-tilt.js"></script>
         <script>
             if (new URLSearchParams(window.location.search).has("submitted")) {
-                const submitButton = document.getElementById("contact-submit-btn");
+                const submitButton =
+                    document.getElementById("contact-submit-btn");
                 if (submitButton) submitButton.textContent = "submitted";
             }
         </script>
